@@ -62,21 +62,18 @@ if __name__ == "__main__":
     parser.add_argument("projects", type=int, nargs="+", help="需要统计的仓库id")
     parser.add_argument(
         "--url",
-        # dest="accumulate",
-        # action="store_const",
-        # const=sum,
+        "-U",
         help="gitlab URL",
     )
     parser.add_argument(
         "--token",
-        # dest="accumulate",
-        # action="store_const",
-        # const=sum,
+        "-T",
         help="private token",
         required=True,
     )
     parser.add_argument(
         "--date",
+        "-D",
         help="截止日期,使用 isoformat，比如2023-05-14",
         type=date_parser.isoparse,
     )
